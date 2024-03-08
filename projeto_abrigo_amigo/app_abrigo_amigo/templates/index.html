@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Abrigo amigo!</title>
+</head>
+<body>
+    <header class="main">
+        <div class="logo">
+            <a><span style="color:#FFCA67;">Abrigo </span>Amigo</a>
+        </div>
+        <ul>
+            <li><a href="#Inicio" onclick="mostrarOcultar('Inicio')" class="Active_tag">Inicio</a></li>
+            <li><a href="#Explorar" onclick="mostrarOcultar('Explorar')" class="Active_tag">Explorar</a></li>
+            <li><a href="#Quem_somos" onclick="mostrarOcultar('Quem_somos')" class="Active_tag">Quem somos?</a></li>
+        </ul>
+    </header>
+        <div id="Inicio">
+            <div class="content">
+                <img src="img\image 2.png" alt="dogcat">
+                <h1>Olá, seja bem-vindo ao <br> Abrigo Amigo</h1>
+                <div class="container-button">
+                    <button class="btn" ><img src="img\bt\OIP-removebg-preview 2.png" alt="Dog"> Cães</button>
+                    <button class="btn" ><img src="imgs\bt\gato_icon-removebg-preview 2.png" alt="cat"> Gatos</button>
+                    <button class="btn" ><img src="imgs\bt\istockphoto-1412271163-612x612-removebg-preview 3.png" alt="doação">Doação</button>
+                    <button class="btn" ><img src="imgs\bt\fun-cartoon-3d-police-character_680902-779-removebg-preview 4.png" alt="denúncia">Denúncias</button>  
+                </div>
+            </div>
+        </div>
+        <div id="Explorar" style="display: none;" >
+            <div class="line"></div>
+            <div class="text">
+                <h1>Explorar</h1>
+            </div>
+            <div class="container">
+                <h1>Animais para Adoção</h1>
+                <div class="dog-list">
+                    <!-- Repetir este bloco para cada cachorro -->
+                    <div class="dog">
+                        <img src="imgs\btexp\Rectangle 315.png" alt="Cachorro 1">
+                        <h2>Cachorro 1</h2>
+                        <p>Raça: Labrador</p>
+                        <p>Idade: 2 anos</p>
+                        <button>❤Adotar</button>
+                    </div>
+                    <!-- Inserir lista de cachorros-->
+                    </div>
+                    <div class="dog">
+                        <img src="imgs\btexp\Rectangle 315.png" alt="Cachorro 1">
+                        <h2>Cachorro 1</h2>
+                        <p>Raça: Labrador</p>
+                        <p>Idade: 2 anos</p>
+                        <a href="adote.html"><button>❤Adotar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Quem_somos" style="display: none;">
+            <div class="classeteste">
+                <img src="imgs\qmsomos\Ellipse 9.png" alt="emoji-teste">
+                <h1>Quem somos?</h1>
+                <h3>O Abrigo Amigo é um insituto sem fins<br> lucrativos que se localizado na cidade<br> de Arcoverde no Estado de Pernambuco,<br> com o intuito de garantir um lar com<br> todos os cuidados para animais em<br> situações de abandono.</h3>
+                <div class="links">
+                     <a href="" style="--socialAni:1"><i class='bx bxl-instagram'></i>Instagram</a>
+                     <a href="" style="--socialAni:1"><i class='bx bxl-facebook'></i>Facebook</a>
+                     <a href="" style="--socialAni:1"><i class='bx bxl-twitter'></i>Twitter</a>
+                     <a href="" style="--socialAni:1"><i class='bx bxl-gmail'></i>Gmail</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function mostrarOcultar(id) {
+                var elementos = document.querySelectorAll('[id^="Inicio"], [id^="Explorar"], [id^="Quem_somos"]');
+                elementos.forEach(function(elemento) {
+                    elemento.style.display = "none";
+                });
+                
+                var divSelecionada = document.getElementById(id);
+                if (divSelecionada) {
+                    divSelecionada.style.display = "block";
+                }
+            }
+        </script>
+</body>
+</html>

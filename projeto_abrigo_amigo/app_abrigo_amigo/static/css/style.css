@@ -1,0 +1,192 @@
+/* start of home page */
+
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+*{
+    margin: 0;
+    top: 0;
+    scroll-behavior: smooth;
+}
+/* Nav */
+header {
+    /*box-shadow: 0 4px 17px rgba(0, 0, 0, .1);*/
+    top: 0;
+    margin: 0;
+    z-index: 1;
+    position: fixed;
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 75px;
+}
+.logo{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 60px;
+    line-height: 45px;
+}
+
+.main ul{ 
+    float: right;
+    margin-right: 20px;
+    margin-top: 25px;
+    font-size: large;
+    letter-spacing: .7px;
+}
+.main li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.main a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* end nav */
+
+.content{
+    background-color: #D69E6B;
+    width: 100%;
+    height: 250px;
+    margin-top: 75px;
+    display: fixed;
+}
+.content h1{
+    align-items: center;
+    padding: 60px;
+    font-size: 32px;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    width: 84%;
+    height: 20px;
+}
+.content img {
+    width: 35%;
+    height: 100%;
+    float: right;
+}
+
+.container-button {
+    position:relative;
+    margin-top: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #F2AE2E;
+    margin: 0 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.btn img{
+    width: 90px;
+}
+/* end of home page */
+
+/*start of exp page */
+
+.line {
+    background-color: #D69E6B;
+    width: 100%;
+    height: 30px;
+    margin-top: 75px;
+    position: fixed;
+}
+
+.text h1 {
+    font-family: "Elsie Swash Caps", serif;
+    color: #732E07;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 100px;
+    font-size: 80px;
+    text-align: center;
+}
+
+/* teste css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px; 
+    text-align: center;
+}
+
+.dog {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dog img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.dog h2 {
+    margin-top: 10px;
+}
+
+.dog p {
+    font-size: 14px;
+}
+
+.dog button{
+    background: #F2AE2E;
+    cursor: pointer;
+    font-family: "Kadwa", serif;
+    color: #732E07;
+    border-radius: 5px;
+}
+
+/* End explorar-page */
+
+/* start of who-we-are */
+
+.classeteste h1 {
+    margin: 276px;
+    padding-left: 250px;
+    position: absolute;
+    display: block;
+
+}
+.classeteste h3 {
+    top: 327px;
+    left: 440px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+    display: block;
+}
+
+.classeteste img {
+    width: 200px;
+    height: 200px;  
+    margin: 270px 92px;
+    left: 92px;
+}
+
+.links{
+    margin-top: -50px;
+}
+
+.links a {
+    margin-left: 100px;
+    text-decoration: none;
+}
