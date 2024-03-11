@@ -22,13 +22,13 @@
     </header>
         <div id="Inicio">
             <div class="content">
-                <img src="img\image 2.png" alt="dogcat">
+                <img src="{% static 'img\image 2.png' %}" alt="dogcat">
                 <h1>Olá, seja bem-vindo ao <br> Abrigo Amigo</h1>
                 <div class="container-button">
-                    <button class="btn" ><img src="img\bt\OIP-removebg-preview 2.png" alt="Dog"> Cães</button>
-                    <button class="btn" ><img src="imgs\bt\gato_icon-removebg-preview 2.png" alt="cat"> Gatos</button>
-                    <button class="btn" ><img src="imgs\bt\istockphoto-1412271163-612x612-removebg-preview 3.png" alt="doação">Doação</button>
-                    <button class="btn" ><img src="imgs\bt\fun-cartoon-3d-police-character_680902-779-removebg-preview 4.png" alt="denúncia">Denúncias</button>  
+                    <button class="btn" ><img src="{% static 'img\bt\OIP-removebg-preview 2.png' %}" alt="Dog"> Cães</button>
+                    <button class="btn" ><img src="{% static 'img\bt\gato_icon-removebg-preview 2.png' %}" alt="cat"> Gatos</button>
+                    <button class="btn" ><img src="{% static 'img\bt\istockphoto-1412271163-612x612-removebg-preview 3.png' %}" alt="doação">Doação</button>
+                    <button class="btn" ><img src="{% static 'img\bt\fun-cartoon-3d-police-character_680902-779-removebg-preview 4.png' %}" alt="denúncia">Denúncias</button>  
                 </div>
             </div>
         </div>
@@ -42,16 +42,17 @@
                 <div class="dog-list">
                     <!-- Repetir este bloco para cada cachorro -->
                     <div class="dog">
-                        <img src="imgs\btexp\Rectangle 315.png" alt="Cachorro 1">
+                        <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
                         <h2>Cachorro 1</h2>
-                        <p>Raça: Labrador</p>
                         <p>Idade: 2 anos</p>
+                        <p>Raça: Labrador</p>
+                        <p>Gênero: </p>
                         <button>❤Adotar</button>
                     </div>
                     <!-- Inserir lista de cachorros-->
                     </div>
                     <div class="dog">
-                        <img src="imgs\btexp\Rectangle 315.png" alt="Cachorro 1">
+                        <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
                         <h2>Cachorro 1</h2>
                         <p>Raça: Labrador</p>
                         <p>Idade: 2 anos</p>
@@ -62,7 +63,7 @@
         </div>
         <div id="Quem_somos" style="display: none;">
             <div class="classeteste">
-                <img src="imgs\qmsomos\Ellipse 9.png" alt="emoji-teste">
+                <img src="{% static 'img\qmsomos\Ellipse 9.png' %}" alt="emoji-teste">
                 <h1>Quem somos?</h1>
                 <h3>O Abrigo Amigo é um insituto sem fins<br> lucrativos que se localizado na cidade<br> de Arcoverde no Estado de Pernambuco,<br> com o intuito de garantir um lar com<br> todos os cuidados para animais em<br> situações de abandono.</h3>
                 <div class="links">
