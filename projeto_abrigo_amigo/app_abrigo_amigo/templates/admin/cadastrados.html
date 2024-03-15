@@ -1,19 +1,21 @@
 <div class="container">
     <table>
         <tr>
-            <th>id</th>
+<!--            <th>id</th>
             <th>nome</th>
             <th>idade</th>
             <th>raça</th>
-            <th>Gênero</th>
+            <th>Gênero</th>-->
+            <th>Imagem</th>
         </tr>
         {% for animal in animais %}
         <tr>
+<!--        <td>{{animal.nome}}</td>
             <td>{{animal.id}}</td>
-            <td>{{animal.nome}}</td>
             <td>{{animal.idade}}</td>
             <td>{{animal.raça}}</td>
-            <td>{{animal.gênero}}</td>
+            <td>{{animal.gênero}}</td>-->
+            <td>{{animal.foto}}</td>
         </tr>
         {% endfor %}
     </table>

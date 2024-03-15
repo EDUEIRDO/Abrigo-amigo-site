@@ -17,15 +17,17 @@
         </span>
       </div>
     </nav>
-    <form action="{% url 'listagem_animais' %}" method="post">
+    <form action="{% url 'listagem_animais' %}" method="post" enctype="multipart/form-data">
       {% csrf_token %}
+      {{ form.as_p }}
       <div style="text-align: center;" class="container">
-        <h1>Cadastro</h1>
-        <!--Foto <input name="foto" type="image" required>-->
+        imagem <input name="foto" type="image">
+<!--    <h1>Cadastro</h1>
+        Foto <input name="foto" type="image" required>
         Nome <input name="nome" class="form-control-sm" type="text" required>
         Idade <input name="idade" class="form-control-sm" type="text" required>
         Raça <input name="raça" class="form-control-sm" type="text" required>
-        Gênero <input name="gênero" class="form-control-sm" type="text" required>
+        Gênero <input name="gênero" class="form-control-sm" type="text" required>-->
         <button style="border: none; border-radius: 15px;">Enviar</button>
       </div>
     </form> 
