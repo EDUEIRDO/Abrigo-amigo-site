@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Abrigo amigo!</title>
 </head>
@@ -43,13 +42,16 @@
                     <!-- Repetir este bloco para cada cachorro -->
                     <!-- Inserir lista de cachorros-->
                     </div>
+                    {% for animal in animais %}
                     <div class="dog">
                         <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
-                        <h2>Cachorro 1</h2>
-                        <p>Raça: Labrador</p>
-                        <p>Idade: 2 anos</p>
-                        <a href="adote.html"><button>❤Adotar</button></a>
+                        <h2>{{ animal.nome }}</h2>
+                        <p>Raça: {{ animal.raça }}</p>
+                        <p>Idade: {{ animal.idade }}</p>
+                        <p>Gênero: {{ animal.gênero }}</p>
+                        <button>❤Adotar</button>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
