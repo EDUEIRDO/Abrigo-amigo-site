@@ -7,4 +7,4 @@ class Animais(models.Model):
     raça = models.TextField(max_length=255)
     gênero = models.TextField(max_length=255)
 #    imagem = models.ImageField(upload_to='projeto_abrigo_amigo/app_abrigo_amigo/fotos/', width_field=None, height_field=None, max_length=100)
-    imagem = models.ImageField(upload_to='imagens/')
+#    imagem = models.ImageField(upload_to='imagens/')
