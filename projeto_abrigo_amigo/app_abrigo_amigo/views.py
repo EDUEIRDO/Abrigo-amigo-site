@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Animais
-#from .forms import AnimaisForm
+from .forms import FormAnimal
 
 # Create your views here.
 def home(request):
@@ -31,13 +31,14 @@ def banco(request):
 #def sucesso(request):
 #    return render(request, 'admin/cadastrados.html')
 
+#Teste de formulario para adoção.
+def FormularioTeste(request):
+    form = FormAnimal(request.POST, request.FILES)
+    if form.is_valid():
+        form.save()
+        return render(request, 'admin/teste.html', {'form': form})
 
-#def admin(request):
-#    form = Animal_Form(request.POST, request.FILES)
-#    if form.is_valid():
-#        form.save()
-#        return render(request, 'admin/cadastrados.html', {'form': form})
-
+#Admin padrão para salvar cadastros e exibir    
 def admin(request):
     novo_animal = Animais()
     novo_animal.nome = request.POST.get('nome')
