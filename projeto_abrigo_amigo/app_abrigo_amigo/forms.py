@@ -1,8 +1,7 @@
-# forms.py
 from django import forms
-from .models import MinhaImagem
+from .models import Animais
 
-class MinhaImagemForm(forms.ModelForm):
+class AnimaisForm(forms.ModelForm):
     class Meta:
-        model = MinhaImagem
-        fields = ['imagem']
+        model = Animais
+        fields = ['nome', 'idade', 'raça', 'gênero', 'imagem']
