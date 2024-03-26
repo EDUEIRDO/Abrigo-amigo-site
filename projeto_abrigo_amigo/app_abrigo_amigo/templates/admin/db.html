@@ -19,14 +19,14 @@
     </nav>
     <form action="{% url 'listagem_animais' %}" method="post" enctype="multipart/form-data">
       {% csrf_token %}
-      <button style="border: none; border-radius: 15px;">Enviar</button>
       <div style="text-align: center;" class="container">
         <h1>Cadastro</h1>
         Nome <input name="nome" class="form-control-sm" type="text" required><br>
         Idade <input name="idade" class="form-control-sm" type="text" required><br>
         Raça <input name="raça" class="form-control-sm" type="text" required><br>
         Gênero <input name="gênero" class="form-control-sm" type="text" required><br>
-      
+        Tipo <input name="tipo" class="form-control-sm" type="text" required>
+        <button style="border: none; border-radius: 15px;">Enviar</button>
       </div>
     </form> 
 
