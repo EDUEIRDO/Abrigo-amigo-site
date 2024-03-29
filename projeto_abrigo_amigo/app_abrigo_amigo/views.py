@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404
 from .models import Animais
 
 # Create your views here.
@@ -54,8 +54,44 @@ def admin(request):
     return render(request, 'admin/cadastrados.html', animal)
 
 #Ajustar o filtro para exibição de dados!
-def teste(request):
-    dog ={
-        'dogs': Animais.objects.filter(tipo='C')
+def dogs_page(request):
+    novo_animal = Animais()
+    novo_animal.nome = request.POST.get('nome')
+    novo_animal.idade = request.POST.get('idade')
+    novo_animal.raça = request.POST.get('raça')
+    novo_animal.gênero = request.POST.get('gênero')
+    novo_animal.tipo = request.POST.get('tipo')
+    animal ={
+        'animais': Animais.objects.filter(tipo='C')
     }
-    return render(request, 'admin/teste.html', dog)
+    return render(request, 'admin/dogs_page.html', animal)
+
+
+def cats_page(request):
+    novo_animal = Animais()
+    novo_animal.nome = request.POST.get('nome')
+    novo_animal.idade = request.POST.get('idade')
+    novo_animal.raça = request.POST.get('raça')
+    novo_animal.gênero = request.POST.get('gênero')
+    novo_animal.tipo = request.POST.get('tipo')
+    animal ={
+        'animais': Animais.objects.filter(tipo='G')
+    }
+    return render(request, 'admin/cats_page.html', animal)
+
+def teste(request, animal_id):
+    novo_animal = Animais()
+    novo_animal.nome = request.POST.get('nome')
+    novo_animal.idade = request.POST.get('idade')
+    novo_animal.raça = request.POST.get('raça')
+    novo_animal.gênero = request.POST.get('gênero')
+    novo_animal.tipo = request.POST.get('tipo')
+#    novo_animal.imagem = request.POST.get('imagem')
+    novo_animal.save()
+
+    animal ={
+        'animais': Animais.objects.all()
+    }
+#isso é errrrrrooooo
+    animal = get_object_or_404(Animais, pk=1)
+    return render(request, 'teste.html', {'animal': animal})

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Abrigo amigo!</title>
+    <title>Abrigo amigo!</title> 
 </head>
 <body>
     <header class="main">
@@ -24,8 +24,8 @@
                 <img src="{% static 'img\image 2.png' %}" alt="dogcat">
                 <h1>Olá, seja bem-vindo ao <br> Abrigo Amigo</h1>
                 <div class="container-button">
-                    <button class="btn" ><img src="{% static 'img\bt\OIP-removebg-preview 2.png' %}" alt="Dog"> Cães</button>
-                    <button class="btn" ><img src="{% static 'img\bt\gato_icon-removebg-preview 2.png' %}" alt="cat"> Gatos</button>
+                    <a href="{% url 'dogs_page' %}"><button class="btn" ><img src="{% static 'img\bt\OIP-removebg-preview 2.png' %}" alt="Dog"> Cães</button></a>
+                    <a href="{% url 'cats_page' %}"><button class="btn" ><img src="{% static 'img\bt\gato_icon-removebg-preview 2.png' %}" alt="cat"> Gatos</button></a>
                     <button class="btn" ><img src="{% static 'img\bt\istockphoto-1412271163-612x612-removebg-preview 3.png' %}" alt="doação">Doação</button>
                     <button class="btn" ><img src="{% static 'img\bt\fun-cartoon-3d-police-character_680902-779-removebg-preview 4.png' %}" alt="denúncia">Denúncias</button>  
                 </div>
@@ -49,7 +49,7 @@
                         <p>Raça: {{ animal.raça }}</p>
                         <p>Idade: {{ animal.idade }}</p>
                         <p>Gênero: {{ animal.gênero }}</p>
-                        <button>❤Adotar</button>
+                        <a href="{% url 'teste' %}"><button>❤Adotar</button></a>
                     </div>
                     {% endfor %}
                 </div>

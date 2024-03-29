@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,14 +8,10 @@
 <body>
     <div class="container">
         {% for animal in animais %}
-        <div class="dog">
-            <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
             <h2>{{ animal.nome }}</h2>
             <p>Raça: {{ animal.raça }}</p>
             <p>Idade: {{ animal.idade }}</p>
             <p>Gênero: {{ animal.gênero }}</p>
-            <button>❤Adotar</button>
-        </div>
         {% endfor %}
     </div>
 </body>
