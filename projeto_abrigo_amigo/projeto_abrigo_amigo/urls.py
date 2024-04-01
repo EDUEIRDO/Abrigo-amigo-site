@@ -1,5 +1,7 @@
 from django.urls import path
 from app_abrigo_amigo import views
+from django.conf.urls import handler404
+
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -7,5 +9,6 @@ urlpatterns = [
     path('admin/cadastrados/', views.admin, name='listagem_animais'),
     path('cachorros/', views.dogs_page, name='dogs_page'),
     path('gatos/', views.cats_page, name='cats_page'),
-    path('animal/', views.teste, name='teste'),
+    path('animal/<int:id_animal>/', views.teste, name='teste'),
 ]
+#handler404 = 'app_abrigo_amigo.views.pagina_nao_encontrada'

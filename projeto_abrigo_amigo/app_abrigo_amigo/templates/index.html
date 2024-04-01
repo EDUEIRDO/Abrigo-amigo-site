@@ -45,11 +45,11 @@
                     {% for animal in animais %}
                     <div class="dog">
                         <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
+                        {{ animal.id_animal }}
                         <h2>{{ animal.nome }}</h2>
                         <p>Raça: {{ animal.raça }}</p>
                         <p>Idade: {{ animal.idade }}</p>
                         <p>Gênero: {{ animal.gênero }}</p>
-                        <a href="{% url 'teste' %}"><button>❤Adotar</button></a>
                     </div>
                     {% endfor %}
                 </div>

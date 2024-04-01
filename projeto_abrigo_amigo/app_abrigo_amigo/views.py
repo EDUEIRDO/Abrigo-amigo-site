@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404
+from django.http import Http404, HttpResponse
 from .models import Animais
 
 # Create your views here.
 def home(request):
     novo_animal = Animais()
+    novo_animal.id_animal = request.POST.get('id_animal')
     novo_animal.nome = request.POST.get('nome')
     novo_animal.idade = request.POST.get('idade')
     novo_animal.raça = request.POST.get('raça')
@@ -40,6 +42,7 @@ def banco(request):
 #Admin padrão para salvar cadastros e exibir    
 def admin(request):
     novo_animal = Animais()
+    novo_animal.id_animal = request.POST.get('id_animal')
     novo_animal.nome = request.POST.get('nome')
     novo_animal.idade = request.POST.get('idade')
     novo_animal.raça = request.POST.get('raça')
@@ -69,6 +72,7 @@ def dogs_page(request):
 
 def cats_page(request):
     novo_animal = Animais()
+    novo_animal.id_animal = request.POST.get('id_animal')
     novo_animal.nome = request.POST.get('nome')
     novo_animal.idade = request.POST.get('idade')
     novo_animal.raça = request.POST.get('raça')
@@ -79,19 +83,13 @@ def cats_page(request):
     }
     return render(request, 'admin/cats_page.html', animal)
 
-def teste(request, animal_id):
-    novo_animal = Animais()
-    novo_animal.nome = request.POST.get('nome')
-    novo_animal.idade = request.POST.get('idade')
-    novo_animal.raça = request.POST.get('raça')
-    novo_animal.gênero = request.POST.get('gênero')
-    novo_animal.tipo = request.POST.get('tipo')
-#    novo_animal.imagem = request.POST.get('imagem')
-    novo_animal.save()
-
-    animal ={
-        'animais': Animais.objects.all()
-    }
+def teste(request, id_animal):
 #isso é errrrrrooooo
-    animal = get_object_or_404(Animais, pk=1)
-    return render(request, 'teste.html', {'animal': animal})
+#    try:
+        animal = get_object_or_404(Animais, pk=id_animal)
+        return render(request, 'teste.html', {'animal': animal})
+#    except Animais.DoesNotExist:
+#        return pagina_nao_encontrada
+    
+#def pagina_nao_encontrada(request, exception):
+#    return render(request, '404.html', status=404)
