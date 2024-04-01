@@ -84,12 +84,6 @@ def cats_page(request):
     return render(request, 'admin/cats_page.html', animal)
 
 def teste(request, id_animal):
-#isso é errrrrrooooo
-#    try:
-        animal = get_object_or_404(Animais, pk=id_animal)
-        return render(request, 'teste.html', {'animal': animal})
-#    except Animais.DoesNotExist:
-#        return pagina_nao_encontrada
     
-#def pagina_nao_encontrada(request, exception):
-#    return render(request, '404.html', status=404)
+    animal = get_object_or_404(Animais, pk=id_animal)
+    return render(request, 'teste.html', {'animal': animal})
