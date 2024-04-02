@@ -50,6 +50,7 @@
                         <p>Raça: {{ animal.raça }}</p>
                         <p>Idade: {{ animal.idade }}</p>
                         <p>Gênero: {{ animal.gênero }}</p>
+                        <a href="{% url 'teste' id_animal=animal.id_animal %}"><button>Adotar</button></a>
                     </div>
                     {% endfor %}
                 </div>

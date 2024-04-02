@@ -84,6 +84,5 @@ def cats_page(request):
     return render(request, 'admin/cats_page.html', animal)
 
 def teste(request, id_animal):
-    
     animal = get_object_or_404(Animais, pk=id_animal)
     return render(request, 'teste.html', {'animal': animal})
