@@ -9,6 +9,6 @@ urlpatterns = [
     path('admin/cadastrados/', views.admin, name='listagem_animais'),
     path('cachorros/', views.dogs_page, name='dogs_page'),
     path('gatos/', views.cats_page, name='cats_page'),
-    path('animal/<int:id_animal>/', views.teste, name='teste'),
+    path('animal/<int:id_animal>/', views.page_adote, name='page_adote'),
 ]
 #handler404 = 'app_abrigo_amigo.views.pagina_nao_encontrada'
