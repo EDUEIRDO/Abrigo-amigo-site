@@ -4,9 +4,20 @@
 <html>
 <head>
     <title>Detalhes do Animal</title>
-    <link rel="stylesheet" href="{% static 'css/' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
+    <header class="main">
+        <div class="logo">
+            <a><span style="color:#FFCA67;">Abrigo </span>Amigo</a>
+        </div>
+        <ul>
+            <li><a href="{% url 'home' %}" onclick="mostrarOcultar('Inicio')" class="Active_tag">Inicio</a></li>
+            <li><a href="{% url 'home' %}" onclick="mostrarOcultar('Explorar')" class="Active_tag">Explorar</a></li>
+            <li><a href="{% url 'home' %}" onclick="mostrarOcultar('Quem_somos')" class="Active_tag">Quem somos?</a></li>
+        </ul>
+    </header>
     {{animal.nome}}
     {{animal.idade}}
     {{animal.gênero}}
@@ -40,5 +51,18 @@
         <input type="text">
         <button>Confimar</button>
     </div>
+    <script>
+        function mostrarOcultar(id) {
+            var elementos = document.querySelectorAll('[id^="Inicio"], [id^="Explorar"], [id^="Quem_somos"]');
+            elementos.forEach(function(elemento) {
+                elemento.style.display = "none";
+            });
+            
+            var divSelecionada = document.getElementById(id);
+            if (divSelecionada) {
+                divSelecionada.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
