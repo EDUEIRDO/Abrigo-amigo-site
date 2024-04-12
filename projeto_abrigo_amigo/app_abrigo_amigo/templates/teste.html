@@ -23,11 +23,14 @@
     {{animal.gênero}}
     {{ animal.raça }}
     <div class="pre-form">
+        <form action="https://formsubmit.co/cadusilvateno@gmail.com" method="post">
         <h1>Adoção</h1>
         <h2>Olá, Você pode me adotar<br> preenchendo o formulario a seguir:</h2>
         <h2>Dados pessoais</h2>
-        <label for="nome">Nome</label>
-        <input type="text">
+        <label for="name">Nome</label>
+        <input type="text" name="name">
+        <label for="email">Email</label>
+        <input type="email" name="email" required>
         <label for="idade">Idade</label>
         <input type="text">
         <label for="gênero">Gênero</label>
@@ -49,7 +52,10 @@
         <input type="text">
         <label for="uf">UF</label>
         <input type="text">
-        <button>Confimar</button>
+        <button type="submit">Confimar</button>
+        <input type="hidden" name="_captcha" value="false">
+        </form>
+
     </div>
     <script>
         function mostrarOcultar(id) {
