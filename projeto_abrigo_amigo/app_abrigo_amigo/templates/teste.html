@@ -6,6 +6,11 @@
     <title>Detalhes do Animal</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <style>
+        .pre-form{
+            margin-top: 150px;
+        }
+    </style>
 </head>
 <body>
     <header class="main">
@@ -18,23 +23,24 @@
             <li><a href="{% url 'home' %}" onclick="mostrarOcultar('Quem_somos')" class="Active_tag">Quem somos?</a></li>
         </ul>
     </header>
-    {{animal.nome}}
-    {{animal.idade}}
-    {{animal.gênero}}
-    {{ animal.raça }}
+
     <div class="pre-form">
         <form action="https://formsubmit.co/cadusilvateno@gmail.com" method="post">
         <h1>Adoção</h1>
+        {{animal.nome}}
+        {{animal.idade}}
+        {{animal.gênero}}
+        {{ animal.raça }}
         <h2>Olá, Você pode me adotar<br> preenchendo o formulario a seguir:</h2>
         <h2>Dados pessoais</h2>
         <label for="name">Nome</label>
         <input type="text" name="name">
         <label for="email">Email</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" required><br>
         <label for="idade">Idade</label>
         <input type="text">
         <label for="gênero">Gênero</label>
-        <input type="text">
+        <input type="text"><br>
         <label for="cpf">CPF</label>
         <input type="number">
         <label for="telefone">Telefone</label>
@@ -43,11 +49,11 @@
         <label for="cep">CEP</label>
         <input type="text">
         <label for="logradouro">Logradouro</label>
-        <input type="text">
+        <input type="text"><br>
         <label for="num">Número</label>
         <input type="number">
         <label for="bairro">Bairro</label>
-        <input type="text">
+        <input type="text"><br>
         <label for="cidade">Cidade</label>
         <input type="text">
         <label for="uf">UF</label>
