@@ -86,3 +86,9 @@ def cats_page(request):
 def page_adote(request, id_animal):
     animal = get_object_or_404(Animais, pk=id_animal)
     return render(request, 'teste.html', {'animal': animal})
+
+def doação(request):
+    return render(request, 'admin/doação.html')
+
+def Denuncia(request):
+    return render(request,'admin/denuncias.html')
