@@ -29,6 +29,8 @@ header {
     margin-top: 10px;
     font-size: 60px;
     line-height: 45px;
+    font-weight: 800;
+    animation: leftSideAni 1s ease forwards;
 }
 
 .main ul{ 
@@ -41,6 +43,10 @@ header {
 .main li {
     display: inline-block;
     margin-left: 20px;
+    line-height: 2;
+    transition: .3s;
+    opacity: 0;
+    animation: navani 1s ease forwards;
 }
 .main a {
     text-decoration: none;
@@ -59,7 +65,7 @@ header {
 .pre-form h2{
     margin-top: 20px;
     animation: leftSideAni 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: 0.1s;
 }
 .pre-form label {
     margin-top: 20px;

@@ -27,27 +27,7 @@ def banco(request):
         form = AnimalForm()
         return render(request, 'admin/db.html', {'form': form})
 
-#def form_info(request):
-#    if request.method == 'POST':
-#        form = AnimaisForm(request.POST, request.FILES)
-#        if form.is_valid():
-#            form.save()
-#            return redirect('sucesso')
-#    else:
-#        form = AnimaisForm()
-#    return render(request, 'db.html', {'form': form})
-
-#def sucesso(request):
-#    return render(request, 'admin/cadastrados.html')
-
-#Teste de formulario para adoção.
-#def FormularioTeste(request):
-#    form = FormAnimal(request.POST, request.FILES)
-#    if form.is_valid():
-#        form.save()
-#        return render(request, 'admin/teste.html', {'form': form})
-
-#Admin padrão para salvar cadastros e exibir    
+#Admin padrão para salvar cadastros e exibir
 def admin(request):
     animais = Animais.objects.all()
     return render(request, 'admin/cadastrados.html', {'animais': animais})
