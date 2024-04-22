@@ -27,6 +27,8 @@ header {
     margin-top: 10px;
     font-size: 60px;
     line-height: 45px;
+    font-weight: 800;
+    animation: leftSideAni 1s ease forwards;
 }
 
 .main ul{ 
@@ -39,10 +41,15 @@ header {
 .main li {
     display: inline-block;
     margin-left: 20px;
+    line-height: 2;
+    transition: .3s;
+    opacity: 0;
+    animation: navani 1s ease forwards;
 }
 .main a {
     text-decoration: none;
     color: #333;
+    
 }
 
 /* end nav */
@@ -186,4 +193,91 @@ header {
 .links a {
     margin-left: 100px;
     text-decoration: none;
+}
+
+/* Teste css formulario
+
+
+/* Animation */
+@keyframes leftSideAni {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes navani {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightSideAni {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes topSideAni {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SocialAni {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ImgAni {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-9px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes imageAni {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

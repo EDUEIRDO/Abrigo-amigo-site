@@ -9,13 +9,22 @@
 </head>
 <body>
     <div class="container">
-        {% for animal in animais %}
-            <h2>{{ animal.nome }}</h2>
-            <p>Raça: {{ animal.raça }}</p>
-            <p>Idade: {{ animal.idade }}</p>
-            <p>Gênero: {{ animal.gênero }}</p>
-            <a href="{% url 'page_adote' id_animal=animal.id_animal %}"><button>Adotar</button></a>
-        {% endfor %}
+        <h1>Animais para Adoção</h1>
+        <div class="dog-list">
+            <!-- Repetir este bloco para cada cachorro -->
+            <!-- Inserir lista de cachorros-->
+            </div>
+            {% for animal in animais %}
+            <div class="dog">
+                <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
+                <h2>{{ animal.nome }}</h2>
+                <p>Raça: {{ animal.raça }}</p>
+                <p>Idade: {{ animal.idade }}</p>
+                <p>Gênero: {{ animal.gênero }}</p>
+                <a href="{% url 'page_adote' id_animal=animal.id_animal %}"><button>Adotar</button></a>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </body>
 </html>

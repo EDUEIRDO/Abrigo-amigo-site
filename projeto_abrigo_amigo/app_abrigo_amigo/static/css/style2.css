@@ -1,0 +1,172 @@
+/* start of home page */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+*{
+    margin: 0;
+    top: 0;
+    scroll-behavior: smooth;
+}
+/* Nav */
+header {
+    /*box-shadow: 0 4px 17px rgba(0, 0, 0, .1);*/
+    top: 0;
+    margin: 0;
+    z-index: 1;
+    position: fixed;
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 75px;
+}
+.logo{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 60px;
+    line-height: 45px;
+}
+
+.main ul{ 
+    float: right;
+    margin-right: 20px;
+    margin-top: 25px;
+    font-size: large;
+    letter-spacing: .7px;
+}
+.main li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.main a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* end nav */
+
+/* Teste css form */
+
+.pre-form{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+.pre-form h2{
+    margin-top: 20px;
+    animation: leftSideAni 1s ease forwards;
+    animation-delay: 1s;
+}
+.pre-form label {
+    margin-top: 20px;
+
+}
+.pre-form input{
+    margin-top: 20px;
+    color: #732E07;
+    border: 1px solid #732E07;
+    border-radius: 5px;
+}
+
+.pre-form button{
+    border: none;
+    border-radius: 5px;
+    color: #777;
+    font-size: 18px;
+    outline: none;
+    padding: 15px;
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Animation */
+
+
+@keyframes leftSideAni {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes navani {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightSideAni {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes topSideAni {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SocialAni {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ImgAni {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-9px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes imageAni {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

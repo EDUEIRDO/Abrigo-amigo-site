@@ -4,13 +4,9 @@
 <html>
 <head>
     <title>Detalhes do Animal</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
-    <style>
-        .pre-form{
-            margin-top: 150px;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header class="main">
@@ -27,6 +23,7 @@
     <div class="pre-form">
         <form action="https://formsubmit.co/cadusilvateno@gmail.com" method="post">
         <h1>Adoção</h1>
+        <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
         {{animal.nome}}
         {{animal.idade}}
         {{animal.gênero}}
