@@ -4,7 +4,6 @@
 <html>
 <head>
     <title>Detalhes do Animal</title>
-    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/style2.css' %}">
 </head>
@@ -21,18 +20,23 @@
     </header>
 
     <div class="pre-form">
-        <form action="https://formsubmit.co/cadusilvateno@gmail.com" method="post">
+        
+        
+        <form action="{% url 'listagem_animais' %}" method="post" enctype="multipart/form-data">
             <h1>Adoção</h1>
-            <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
             <div class="infoani">
-                {{animal.nome}} <br>
-                {{animal.idade}} <br>
-                {{animal.gênero}} <br>
-                {{ animal.raça }}
+                {% csrf_token %}
+                <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
+                <h3>{{animal.nome}}</h3> <br>
+                <h3>{{animal.idade}}</h3> <br>
+                <h3>{{animal.gênero}}</h3> <br>
+                <h3>{{ animal.raça }}</h3>
             </div>
             <h2>Olá, Você pode me adotar<br> preenchendo o formulario a seguir:</h2>
             <h2>Dados pessoais</h2>
-            <label for="name">Nome</label>
+            {{ form.as_p }}
+
+<!--            <label for="name">Nome</label>
             <input type="text" name="name">
             <label for="email">Email</label>
             <input type="email" name="email" required><br>
@@ -58,7 +62,7 @@
             <label for="uf">UF</label>
             <input type="text">
             <button type="submit">Confimar</button>
-            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_captcha" value="false">-->
         </form>
 
     </div>

@@ -68,6 +68,12 @@ header {
     margin: 0 auto;
     margin-top: 80px;
 }
+.pre-form img {
+    left: 0;
+    display: flex;
+    width: 40%;
+    height: 100%;
+}
 .pre-form h2{
     margin-top: 20px;
     animation: leftSideAni 1s ease forwards;
@@ -98,10 +104,11 @@ header {
 }
 
 .infoani {
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 50%;
-    height: 20%;
+    display: flex;
+    left: 0;
+}
+
+.infoani h3 {
 }
 
 /* Animation */

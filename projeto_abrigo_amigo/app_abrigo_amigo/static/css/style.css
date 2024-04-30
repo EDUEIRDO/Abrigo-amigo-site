@@ -134,6 +134,7 @@ header {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
+    animation: rightSideAni 2s ease forwards;
 }
 
 .dog img {
