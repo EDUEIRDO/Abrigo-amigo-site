@@ -22,41 +22,43 @@
 
     <div class="pre-form">
         <form action="https://formsubmit.co/cadusilvateno@gmail.com" method="post">
-        <h1>Adoção</h1>
-        <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
-        {{animal.nome}}
-        {{animal.idade}}
-        {{animal.gênero}}
-        {{ animal.raça }}
-        <h2>Olá, Você pode me adotar<br> preenchendo o formulario a seguir:</h2>
-        <h2>Dados pessoais</h2>
-        <label for="name">Nome</label>
-        <input type="text" name="name">
-        <label for="email">Email</label>
-        <input type="email" name="email" required><br>
-        <label for="idade">Idade</label>
-        <input type="text">
-        <label for="gênero">Gênero</label>
-        <input type="text"><br>
-        <label for="cpf">CPF</label>
-        <input type="number">
-        <label for="telefone">Telefone</label>
-        <input type="number">
-        <h2>Endereço</h2>
-        <label for="cep">CEP</label>
-        <input type="text">
-        <label for="logradouro">Logradouro</label>
-        <input type="text"><br>
-        <label for="num">Número</label>
-        <input type="number">
-        <label for="bairro">Bairro</label>
-        <input type="text"><br>
-        <label for="cidade">Cidade</label>
-        <input type="text">
-        <label for="uf">UF</label>
-        <input type="text">
-        <button type="submit">Confimar</button>
-        <input type="hidden" name="_captcha" value="false">
+            <h1>Adoção</h1>
+            <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
+            <div class="infoani">
+                {{animal.nome}} <br>
+                {{animal.idade}} <br>
+                {{animal.gênero}} <br>
+                {{ animal.raça }}
+            </div>
+            <h2>Olá, Você pode me adotar<br> preenchendo o formulario a seguir:</h2>
+            <h2>Dados pessoais</h2>
+            <label for="name">Nome</label>
+            <input type="text" name="name">
+            <label for="email">Email</label>
+            <input type="email" name="email" required><br>
+            <label for="idade">Idade</label>
+            <input type="text">
+            <label for="gênero">Gênero</label>
+            <input type="text"><br>
+            <label for="cpf">CPF</label>
+            <input type="number">
+            <label for="telefone">Telefone</label>
+            <input type="number">
+            <h2>Endereço</h2>
+            <label for="cep">CEP</label>
+            <input type="text">
+            <label for="logradouro">Logradouro</label>
+            <input type="text"><br>
+            <label for="num_casa">Número</label>
+            <input type="number">
+            <label for="bairro">Bairro</label>
+            <input type="text"><br>
+            <label for="cidade">Cidade</label>
+            <input type="text">
+            <label for="uf">UF</label>
+            <input type="text">
+            <button type="submit">Confimar</button>
+            <input type="hidden" name="_captcha" value="false">
         </form>
 
     </div>

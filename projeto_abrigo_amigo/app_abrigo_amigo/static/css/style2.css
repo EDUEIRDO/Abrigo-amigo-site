@@ -58,9 +58,15 @@ header {
 /* Teste css form */
 
 .pre-form{
-    justify-content: center;
-    display: flex;
+    display:flex;
     text-align: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 80%;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 80px;
 }
 .pre-form h2{
     margin-top: 20px;
@@ -89,6 +95,13 @@ header {
     width: 100%;
     cursor: pointer;
     font-weight: bold;
+}
+
+.infoani {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    height: 20%;
 }
 
 /* Animation */

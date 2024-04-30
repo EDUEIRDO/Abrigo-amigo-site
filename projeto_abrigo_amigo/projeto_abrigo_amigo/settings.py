@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_abrigo_amigo'
-    
+    'app_abrigo_amigo',
 ]
 
 MIDDLEWARE = [
