@@ -20,12 +20,9 @@
     </header>
 
     <div class="pre-form">
-        
-        
         <form action="{% url 'listagem_animais' %}" method="post" enctype="multipart/form-data">
             <h1>Adoção</h1>
             <div class="infoani">
-                {% csrf_token %}
                 <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
                 <h3>{{animal.nome}}</h3> <br>
                 <h3>{{animal.idade}}</h3> <br>
@@ -34,37 +31,10 @@
             </div>
             <h2>Olá, Você pode me adotar<br> preenchendo o formulario a seguir:</h2>
             <h2>Dados pessoais</h2>
+            {% csrf_token %}
             {{ form.as_p }}
-
-<!--            <label for="name">Nome</label>
-            <input type="text" name="name">
-            <label for="email">Email</label>
-            <input type="email" name="email" required><br>
-            <label for="idade">Idade</label>
-            <input type="text">
-            <label for="gênero">Gênero</label>
-            <input type="text"><br>
-            <label for="cpf">CPF</label>
-            <input type="number">
-            <label for="telefone">Telefone</label>
-            <input type="number">
-            <h2>Endereço</h2>
-            <label for="cep">CEP</label>
-            <input type="text">
-            <label for="logradouro">Logradouro</label>
-            <input type="text"><br>
-            <label for="num_casa">Número</label>
-            <input type="number">
-            <label for="bairro">Bairro</label>
-            <input type="text"><br>
-            <label for="cidade">Cidade</label>
-            <input type="text">
-            <label for="uf">UF</label>
-            <input type="text">
-            <button type="submit">Confimar</button>
-            <input type="hidden" name="_captcha" value="false">-->
+            <button type="submit">Cadastrar</button>
         </form>
-
     </div>
     <script>
         function mostrarOcultar(id) {

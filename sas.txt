@@ -1,0 +1,19 @@
+.pre-form input{
+    margin-top: 20px;
+    color: #732E07;
+    border: 1px solid #732E07;
+    border-radius: 5px;
+}
+
+.pre-form button{
+    border: none;
+    border-radius: 5px;
+    color: #777;
+    font-size: 18px;
+    outline: none;
+    padding: 15px;
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}

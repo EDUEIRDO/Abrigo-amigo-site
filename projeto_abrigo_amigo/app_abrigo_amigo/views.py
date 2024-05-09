@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404,redirect
 from django.http import Http404, HttpResponse
 from .models import Animais
-from .forms import AnimalForm
+from .forms import AnimalForm, AdoçãoForm
 
 # Create your views here.
 def home(request):
@@ -60,8 +60,10 @@ def cats_page(request):
     return render(request, 'admin/cats_page.html', animal)
 
 def page_adote(request, id_animal):
+    form = AdoçãoForm()
     animal = get_object_or_404(Animais, pk=id_animal)
-    return render(request, 'teste.html', {'animal': animal})
+
+    return render(request, 'teste.html', {'form': form, 'animal': animal})
 
 def doação(request):
     return render(request, 'admin/doação.html')
