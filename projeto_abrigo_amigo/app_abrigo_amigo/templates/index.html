@@ -40,8 +40,6 @@
             <div class="container">
                 <h1>Animais para Adoção</h1>
                 <div class="dog-list">
-                    <!-- Repetir este bloco para cada cachorro -->
-                    <!-- Inserir lista de cachorros-->
                     </div>
                     {% for animal in animais %}
                     <div class="dog">
@@ -56,19 +54,22 @@
                 </div>
             </div>
         </div>
-        <div id="Quem_somos" style="display: none;">
-            <div class="classeteste">
-                <img src="{% static 'img\qmsomos\Ellipse 9.png' %}" alt="emoji-teste">
-                <h1>Quem somos?</h1>
-                <h3>O Abrigo Amigo é um insituto sem fins<br> lucrativos que se localizado na cidade<br> de Arcoverde no Estado de Pernambuco,<br> com o intuito de garantir um lar com<br> todos os cuidados para animais em<br> situações de abandono.</h3>
-                <div class="links">
-                     <a href="" style="--socialAni:1"><i class='bx bxl-instagram'></i>Instagram</a>
-                     <a href="" style="--socialAni:1"><i class='bx bxl-facebook'></i>Facebook</a>
-                     <a href="" style="--socialAni:1"><i class='bx bxl-twitter'></i>Twitter</a>
-                     <a href="" style="--socialAni:1"><i class='bx bxl-gmail'></i>Gmail</a>
+        <section>
+            <div id="Quem_somos" style="display: none;">
+                <div class="classeteste">
+                    <img id="sas" src="{% static 'img\qmsomos\Ellipse 9.png' %}" alt="emoji-teste">
+                    <h1>Quem somos?</h1>
+                    <h3>O Abrigo Amigo é um insituto sem fins<br> lucrativos que se localizado na cidade<br> de Arcoverde no Estado de Pernambuco,<br> com o intuito de garantir um lar com<br> todos os cuidados para animais em<br> situações de abandono.</h3>
+                    <div class="links-img">
+                        <a href=""><img src="{% static 'img\qmsomos\Facebook.png' %}" alt="logo-face"></a>
+                        <a href=""><img src="{% static 'img\qmsomos\Instagram.png' %}" alt="logo-insta"></a> 
+                        <a href=""><img src="{% static 'img\qmsomos\🦆 icon _twitter original_.png' %}" alt="logo-tw"></a>
+                        <a href=""><img src="{% static 'img\qmsomos\Phone.png' %}" alt="logo-phone"></a>
+                        <a href=""><img src="{% static 'img\qmsomos\Circled Envelope.png' %}" alt="logo-email"></a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
         <script>
             function mostrarOcultar(id) {
                 var elementos = document.querySelectorAll('[id^="Inicio"], [id^="Explorar"], [id^="Quem_somos"]');

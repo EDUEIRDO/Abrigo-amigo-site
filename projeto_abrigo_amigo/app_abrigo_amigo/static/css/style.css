@@ -162,6 +162,10 @@ header {
 
 /* start of who-we-are */
 
+.classeteste {
+    position: relative;
+}
+
 .classeteste h1 {
     margin: 276px;
     padding-left: 250px;
@@ -180,20 +184,28 @@ header {
     display: block;
 }
 
-.classeteste img {
+.classeteste #sas {
     width: 200px;
     height: 200px;  
     margin: 270px 92px;
     left: 92px;
 }
 
-.links{
-    margin-top: -50px;
+.links-img{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top: 45%;
+    
+
 }
 
-.links a {
-    margin-left: 100px;
-    text-decoration: none;
+
+.links-img img{
+    padding: 0 60px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
 }
 
 /* Teste css formulario
