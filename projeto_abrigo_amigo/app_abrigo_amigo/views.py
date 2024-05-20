@@ -19,7 +19,7 @@ def home(request):
 
 def banco(request):
     if request.method == 'POST':
-        form = AnimalForm(request.POST, request.FILES)
+        form = AnimalForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('admin/cadastrados.html')
@@ -63,7 +63,7 @@ def page_adote(request, id_animal):
     form = AdoçãoForm()
     animal = get_object_or_404(Animais, pk=id_animal)
 
-    return render(request, 'teste.html', {'form': form, 'animal': animal})
+    return render(request, 'teste.html', {'animal': animal, 'form': form})
 
 def doação(request):
     return render(request, 'admin/doação.html')

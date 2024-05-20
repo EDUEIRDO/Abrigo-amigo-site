@@ -8,7 +8,7 @@
   </head>
   <body>
       <h1>Cadastro</h1>
-      <form action="{% url 'listagem_animais' %}" method="post" enctype="multipart/form-data">
+      <form action="{% url 'listagem_animais' %}" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Cadastrar</button>
