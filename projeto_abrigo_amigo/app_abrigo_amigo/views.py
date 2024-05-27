@@ -18,11 +18,17 @@ def home(request):
     return render(request, 'index.html', animal)
 
 def banco(request):
+    form = AnimalForm()
     if request.method == 'POST':
-        form = AnimalForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('admin/cadastrados.html')
+        
+        novo_animal = AnimalForm(request.POST)
+        novo_animal.nome = request.POST.get('nome')
+        novo_animal.idade = request.POST.get('idade')
+        novo_animal.raça = request.POST.get('raça')
+        novo_animal.gênero = request.POST.get('gênero')
+        novo_animal.tipo = request.POST.get('tipo')
+        novo_animal.save()
+        return redirect(admin())
     else:
         form = AnimalForm()
         return render(request, 'admin/db.html', {'form': form})

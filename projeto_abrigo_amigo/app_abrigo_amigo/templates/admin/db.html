@@ -11,7 +11,7 @@
       <form action="{% url 'listagem_animais' %}" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Cadastrar</button>
+        <input type="submit">Cadastrar</input>
     </form>
   </div> 
   </body>
