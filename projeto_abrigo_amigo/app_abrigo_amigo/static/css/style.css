@@ -163,6 +163,8 @@ header {
 /* start of who-we-are */
 
 .classeteste {
+    margin: 0;
+    padding: 0;
     position: relative;
 }
 

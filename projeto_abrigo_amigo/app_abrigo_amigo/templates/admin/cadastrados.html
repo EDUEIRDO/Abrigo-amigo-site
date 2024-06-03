@@ -7,15 +7,24 @@
             <th>raça</th>
             <th>gênero</th>
             <th>tipo</th>
+            <th>Foto</th>
         </tr>
         {% for animal in animais %}
         <tr>            
             <td>{{animal.id_animal}}</td>
+            <td><a href="{% url 'excluir_animal' animal.id_animal %}">Excluir</a></td>
+            <td> <a href="{% url 'atualizar_animal' animal.id_animal %}">Atualizar</a></td>
             <td>{{animal.nome}}</td>
             <td>{{animal.idade}}</td>
             <td>{{animal.raça}}</td>
             <td>{{animal.gênero}}</td>
             <td>{{animal.tipo}}</td>
+            <td>{% if animal.photo %}
+                    <img src="{{ animal.photo.url }}" alt="{{ animal.nome }}" height="200px">
+                {% else %}
+                    Sem foto
+                {% endif %}
+            </td>
         </tr>
         {% endfor %}
     </table>

@@ -8,10 +8,10 @@
   </head>
   <body>
       <h1>Cadastro</h1>
-      <form action="{% url 'listagem_animais' %}" method="post">
+      <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit">Cadastrar</input>
+        <button type="submit">Cadastrar</button>
     </form>
   </div> 
   </body>

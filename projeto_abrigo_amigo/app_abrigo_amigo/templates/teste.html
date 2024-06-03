@@ -20,10 +20,10 @@
     </header>
 
     <div class="pre-form">
-        <form action="{% url 'listagem_animais' %}" method="post" enctype="multipart/form-data">
+        <form action="" method="post" enctype="multipart/form-data">
             <h1>Adoção</h1>
             <div class="infoani">
-                <img src="{% static 'img\btexp\Rectangle 315.png' %}" alt="Cachorro 1">
+                <img src="{{ animal.photo.url }}" alt="{{ animal.nome }}">
                 <h3>{{animal.nome}}</h3> <br>
                 <h3>{{animal.idade}}</h3> <br>
                 <h3>{{animal.gênero}}</h3> <br>
